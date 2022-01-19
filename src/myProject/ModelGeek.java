@@ -1,4 +1,4 @@
 package myProject;
 
-public class Model {
+public class ModelGeek {
 }
