@@ -11,9 +11,12 @@ import java.awt.event.ActionListener;
  * @version v.1.0.0 date:21/11/2021
  */
 public class GUI extends JFrame {
+    public static final String INSTRUCCIONES="Bienvenido al juego Geek Out! Masters \n"
+            + "Va a tener 10 dados de los cuales 7 estaran activos y 3 inactivos \n"
+            + "";
 
     private Header headerProject;
-    private JButton dadoini1, dadoini2, dadoini3, dadoini4, dadoini5, dadoini6, dadoini7, ayuda, salir;
+    private JButton dadoini1, dadoini2, dadoini3, dadoini4, dadoini5, dadoini6, dadoini7, dadoini8, dadoini9, dadoini10, ayuda, salir;
     private JPanel panelDadosActivos, panelDadosInactivos, panelTarjetaPuntuacion, panelDadosUtilizados;
     private JTextArea ronda, puntosAcumulados;
     private ImageIcon imageDado;
@@ -51,15 +54,30 @@ public class GUI extends JFrame {
         modelGeek = new ModelGeek();
         //Set up JComponents
         headerProject = new Header("Mesa Juego Geeks", Color.BLACK);
-        //constraints.gridwidth=2;
+        constraints.gridwidth=1;
         constraints.gridx=0;
         constraints.gridy=0;
-        constraints.fill=GridBagConstraints.HORIZONTAL;
+        constraints.fill=GridBagConstraints.CENTER;
         this.add(headerProject,constraints);
         //this.add(headerProject,BorderLayout.NORTH); //Change this line if you change JFrame Container's Layout
 
-        imageDado = new ImageIcon(getClass().getResource("/resources/42.png"));
+        modelGeek.inicio();
+        int[] caras = modelGeek.getCaras();
+        imageDado = new ImageIcon(getClass().getResource("/resources/"+caras[0]+".png"));
         dadoini1 = new JButton(imageDado);
+        imageDado = new ImageIcon(getClass().getResource("/resources/"+caras[1]+".png"));
+        dadoini2 = new JButton(imageDado);
+        imageDado = new ImageIcon(getClass().getResource("/resources/"+caras[2]+".png"));
+        dadoini3 = new JButton(imageDado);
+        imageDado = new ImageIcon(getClass().getResource("/resources/"+caras[3]+".png"));
+        dadoini4 = new JButton(imageDado);
+        imageDado = new ImageIcon(getClass().getResource("/resources/"+caras[4]+".png"));
+        dadoini5 = new JButton(imageDado);
+        imageDado = new ImageIcon(getClass().getResource("/resources/"+caras[5]+".png"));
+        dadoini6 = new JButton(imageDado);
+        imageDado = new ImageIcon(getClass().getResource("/resources/"+caras[6]+".png"));
+        dadoini7 = new JButton(imageDado);
+
 
         panelDadosActivos = new JPanel();
         panelDadosActivos.setPreferredSize(new Dimension(300, 200));
@@ -68,8 +86,16 @@ public class GUI extends JFrame {
         constraints.gridx=0;
         constraints.gridy=1;
         //constraints.gridwidth=0;
+        constraints.anchor=GridBagConstraints.FIRST_LINE_START;
         constraints.fill=GridBagConstraints.HORIZONTAL;
         add(panelDadosActivos,constraints);
+        panelDadosActivos.add(dadoini1);
+        panelDadosActivos.add(dadoini2);
+        panelDadosActivos.add(dadoini3);
+        panelDadosActivos.add(dadoini4);
+        panelDadosActivos.add(dadoini5);
+        panelDadosActivos.add(dadoini6);
+        panelDadosActivos.add(dadoini7);
 
 
         panelDadosInactivos = new JPanel();
@@ -79,6 +105,7 @@ public class GUI extends JFrame {
         constraints.gridx=1;
         constraints.gridy=1;
         //constraints.gridwidth=0;
+        constraints.anchor=GridBagConstraints.LAST_LINE_START;
         constraints.fill=GridBagConstraints.HORIZONTAL;
         add(panelDadosInactivos,constraints);
 
@@ -121,16 +148,20 @@ public class GUI extends JFrame {
 
         ayuda = new JButton("AYUDA");
         ayuda.addActionListener(escucha);
-        constraints.gridx=0;
-        constraints.gridy=4;
-        constraints.gridwidth=2;
+        constraints.gridx=3;
+        constraints.gridy=1;
+        constraints.fill=GridBagConstraints.NONE;
+        constraints.anchor=GridBagConstraints.FIRST_LINE_END;
+        constraints.gridwidth=3;
         this.add(ayuda,constraints);
 
         salir = new JButton("SALIR");
         salir.addActionListener(escucha);
         constraints.gridx=3;
-        constraints.gridy=2;
-        constraints.gridwidth=1;
+        constraints.gridy=1;
+        constraints.fill=GridBagConstraints.NONE;
+        constraints.anchor=GridBagConstraints.FIRST_LINE_START;
+        constraints.gridwidth=3;
         this.add(salir, constraints);
 
 
@@ -154,6 +185,12 @@ public class GUI extends JFrame {
 
         @Override
         public void actionPerformed(ActionEvent e){
+
+            if(e.getSource()==salir){
+                System.exit(0);
+            }else if(e.getSource()==ayuda){
+                JOptionPane.showMessageDialog(null, INSTRUCCIONES);
+            }
 
         }
 
