@@ -16,8 +16,8 @@ public class GUI extends JFrame {
             + "";
 
     private Header headerProject;
-    private JButton dadoini1, dadoini2, dadoini3, dadoini4, dadoini5, dadoini6, dadoini7, dadoini8, dadoini9, dadoini10, ayuda, salir;
-    private JPanel panelDadosActivos, panelDadosInactivos, panelTarjetaPuntuacion, panelDadosUtilizados;
+    private JButton dadoini1, dadoini2, dadoini3, dadoini4, dadoini5, dadoini6, dadoini7, dadoini8, dadoini9, dadoini10, ayuda, salir, voltear, usar;
+    private JPanel panelDadosActivos, panelDadosInactivos, panelTarjetaPuntuacion, panelDadosUtilizados, panelAccion;
     private JTextArea ronda, puntosAcumulados;
     private ImageIcon imageDado;
     private Escucha escucha;
@@ -138,13 +138,23 @@ public class GUI extends JFrame {
         add(ronda, constraints);
 
         puntosAcumulados = new JTextArea(4, 16);
-        puntosAcumulados.setText("   130");
+        puntosAcumulados.setText("");
         puntosAcumulados.setBorder(BorderFactory.createTitledBorder("Puntos Acumulados "));
         puntosAcumulados.setBackground(null);
         puntosAcumulados.setEditable(false);
         constraints.gridx=3;
         constraints.gridy=2;
         add(puntosAcumulados, constraints);
+
+        panelAccion = new JPanel();
+        panelAccion.setPreferredSize(new Dimension(150, 100));
+        panelAccion.setBorder(BorderFactory.createTitledBorder("Acciones "));
+        constraints.gridx=1;
+        constraints.gridy=4;
+        add(panelAccion, constraints);
+
+        voltear = new JButton("voltear ");
+        panelAccion.add(voltear);
 
         ayuda = new JButton("AYUDA");
         ayuda.addActionListener(escucha);
@@ -191,6 +201,7 @@ public class GUI extends JFrame {
             }else if(e.getSource()==ayuda){
                 JOptionPane.showMessageDialog(null, INSTRUCCIONES);
             }
+
 
         }
 

@@ -1,8 +1,8 @@
 package myProject;
 
 public class ModelGeek {
-    private Dado dado1, dado2, dado3, dado4, dado5, dado6, dado7, dado8, dado9, dado10;
-    private int ronda, puntacion;
+    private Dado dado1, dado2, dado3, dado4, dado5, dado6, dado7, dado8, dado9, dado10, dado42;
+    private int ronda, puntuacion, estado;
     private int[] caras;
 
     public ModelGeek(){
@@ -29,4 +29,6 @@ public class ModelGeek {
     public int[] getCaras(){
         return caras;
     }
+
+
 }
