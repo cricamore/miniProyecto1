@@ -10,4 +10,6 @@ public class Dado {
         cara = aleatorio.nextInt(6)+1;
         return cara;
     }
+
+
 }
