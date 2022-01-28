@@ -4,6 +4,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
 /**
  * This class is used for ...
@@ -18,8 +20,8 @@ public class GUI extends JFrame {
     private Header headerProject;
     private JButton dadoini1, dadoini2, dadoini3, dadoini4, dadoini5, dadoini6, dadoini7, dadoini8, dadoini9, dadoini10, ayuda, salir, voltear, usar;
     private JButton dado42, dadoCorazon, dadoDragon, dadoHeroe, dadoMeeple, dadoCohete, dadoinactivo1, dadoinactivo2, dadoinactivo3;
-    private JPanel panelDadosActivos, panelDadosInactivos, panelTarjetaPuntuacion, panelDadosUtilizados, panelAccion;
-    private JTextArea ronda, puntosAcumulados;
+    private JPanel panelDadosActivos, panelDadosInactivos, panelTarjetaPuntuacion, panelDadosUtilizados;
+    private JTextArea ronda, puntosAcumulados, accion;
     private ImageIcon imageDado, icono, d42, dadoA, dadoB;
     private Escucha escucha;
     private ModelGeek modelGeek;
@@ -78,15 +80,16 @@ public class GUI extends JFrame {
         dadoini6 = new JButton(imageDado);
         imageDado = new ImageIcon(getClass().getResource("/resources/" + caras[6] + ".png"));
         dadoini7 = new JButton(imageDado);
+        imageDado = new ImageIcon(getClass().getResource("/resources/" + caras[7] + ".png"));
+        dadoini8 = new JButton(imageDado);
+        imageDado = new ImageIcon(getClass().getResource("/resources/" + caras[8] + ".png"));
+        dadoini9 = new JButton(imageDado);
+        imageDado = new ImageIcon(getClass().getResource("/resources/" + caras[9] + ".png"));
+        dadoini9 = new JButton(imageDado);
 
-        imageDado = new ImageIcon(getClass().getResource("/resources/1.png/"));
-        d42 = new ImageIcon(getClass().getResource("/resources/1.png/"));
-        dado42 = new JButton(imageDado);
-        dado42.addActionListener(escucha);
 
-
-        dadoA = (ImageIcon) dadoini1.getIcon();
-        dadoB = (ImageIcon) dado42.getIcon();
+        //dadoA = (ImageIcon) dadoini1.getIcon();
+        //dadoB = (ImageIcon) dado42.getIcon();
 
 
         panelDadosActivos = new JPanel();
@@ -134,8 +137,11 @@ public class GUI extends JFrame {
         dadoinactivo3 = new JButton(imageDado);
 
         panelDadosInactivos.add(dadoinactivo1);
+        dadoinactivo1.addActionListener(escucha);
         panelDadosInactivos.add(dadoinactivo2);
+        dadoinactivo2.addActionListener(escucha);
         panelDadosInactivos.add(dadoinactivo3);
+        dadoinactivo3.addActionListener(escucha);
 
 
         panelTarjetaPuntuacion = new JPanel();
@@ -174,12 +180,12 @@ public class GUI extends JFrame {
         constraints.gridy = 2;
         add(puntosAcumulados, constraints);
 
-        /**panelAccion = new JPanel();
-         panelAccion.setPreferredSize(new Dimension(150, 100));
-         panelAccion.setBorder(BorderFactory.createTitledBorder("Acciones "));
+         accion = new JTextArea();
+         accion.setPreferredSize(new Dimension(150, 100));
+         accion.setBorder(BorderFactory.createTitledBorder("Acciones "));
          constraints.gridx=1;
          constraints.gridy=4;
-         add(panelAccion, constraints);*/
+         add(accion, constraints);
 
         ayuda = new JButton("AYUDA");
         ayuda.addActionListener(escucha);
@@ -219,7 +225,7 @@ public class GUI extends JFrame {
      */
 
 
-    private class Escucha implements ActionListener {
+    private class Escucha implements ActionListener{
 
         @Override
         public void actionPerformed(ActionEvent e) {
@@ -232,12 +238,121 @@ public class GUI extends JFrame {
                 JOptionPane.showMessageDialog(null, null, "Explicación del juego", JOptionPane.PLAIN_MESSAGE, icono);
             }
 
-            //Dado dadoSeleccionado = (Dado) e.getSource();
+
+            if(e.getSource()==dadoini1) {
+                if (modelGeek.dragon1()) {
+                    modelGeek.carasDado1();
+                    accion.setText(modelGeek.getEstadoToString());
+                } else {
+                    modelGeek.carasDado1();
+                    dadoini1.setVisible(false);
+                    panelDadosUtilizados.add(dadoini1);
+                    dadoini1.setVisible(true);
+                    accion.setText(modelGeek.getEstadoToString());
+                }
+
+                if(modelGeek.dado421()){
+                    modelGeek.carasDado1();
+                    dadoini1.setVisible(false);
+                    panelTarjetaPuntuacion.add(dadoini1);
+                    dadoini1.setVisible(true);
+                    accion.setText(modelGeek.getEstadoToString());
+                }
+
+                if (modelGeek.corazon1()) {
 
 
+                    dadoinactivo1.setVisible(false);
+                    panelDadosActivos.add(dadoini8);
+                    accion.setText(modelGeek.getEstadoToString());
+                        modelGeek.carasDado1();
+                        dadoini1.setVisible(false);
+                        panelDadosUtilizados.add(dadoini1);
+                        dadoini1.setVisible(true);
+                    }
+                }
+
+            if(e.getSource()==dadoini2){
+                if(modelGeek.dragon2()){
+                    modelGeek.carasDado2();
+                    accion.setText(modelGeek.getEstadoToString());
+                }else {
+                    modelGeek.carasDado2();
+                    dadoini2.setVisible(false);
+                    panelDadosUtilizados.add(dadoini2);
+                    dadoini2.setVisible(true);
+                    accion.setText(modelGeek.getEstadoToString());
+                }
+            }
+
+            if(e.getSource()==dadoini3){
+                if(modelGeek.dragon3()){
+                    modelGeek.carasDado3();
+                    accion.setText(modelGeek.getEstadoToString());
+                }else {
+                    modelGeek.carasDado3();
+                    dadoini3.setVisible(false);
+                    panelDadosUtilizados.add(dadoini3);
+                    dadoini3.setVisible(true);
+                    accion.setText(modelGeek.getEstadoToString());
+                }
+            }
+
+            if(e.getSource()==dadoini4){
+                if(modelGeek.dragon4()){
+                    modelGeek.carasDado4();
+                    accion.setText(modelGeek.getEstadoToString());
+                }else {
+                    modelGeek.carasDado4();
+                    dadoini4.setVisible(false);
+                    panelDadosUtilizados.add(dadoini4);
+                    dadoini4.setVisible(true);
+                    accion.setText(modelGeek.getEstadoToString());
+                }
+            }
+
+            if(e.getSource()==dadoini5){
+                if(modelGeek.dragon5()){
+                    modelGeek.carasDado5();
+                    accion.setText(modelGeek.getEstadoToString());
+                }else {
+                    modelGeek.carasDado5();
+                    dadoini5.setVisible(false);
+                    panelDadosUtilizados.add(dadoini5);
+                    dadoini5.setVisible(true);
+                    accion.setText(modelGeek.getEstadoToString());
+                }
+            }
+
+            if(e.getSource()==dadoini6){
+                if(modelGeek.dragon6()){
+                    modelGeek.carasDado6();
+                    accion.setText(modelGeek.getEstadoToString());
+                }else {
+                    modelGeek.carasDado6();
+                    dadoini6.setVisible(false);
+                    panelDadosUtilizados.add(dadoini6);
+                    dadoini6.setVisible(true);
+                    accion.setText(modelGeek.getEstadoToString());
+                }
+            }
+
+            if(e.getSource()==dadoini7){
+                if(modelGeek.dragon7()){
+                    modelGeek.carasDado7();
+                    accion.setText(modelGeek.getEstadoToString());
+                }else {
+                    modelGeek.carasDado7();
+                    dadoini7.setVisible(false);
+                    panelDadosUtilizados.add(dadoini7);
+                    dadoini7.setVisible(true);
+                    accion.setText(modelGeek.getEstadoToString());
+                }
+            }
 
 
 
         }
+
     }
 }
