@@ -310,4 +310,75 @@ public class ModelGeek {
         }
     }
 
+    public boolean dado422(){
+        if(caras[1]==1){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    public boolean dado423(){
+        if(caras[2]==1){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    public boolean dado424(){
+        if(caras[3]==1){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    public boolean dado425(){
+        if(caras[4]==1){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    public boolean dado426(){
+        if(caras[5]==1){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    public boolean dado427(){
+        if(caras[6]==1){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    public boolean dado428(){
+        if(caras[7]==1){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    public boolean dado429(){
+        if(caras[8]==1){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    public boolean dado4210(){
+        if(caras[9]==1){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }

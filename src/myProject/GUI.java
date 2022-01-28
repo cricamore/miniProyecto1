@@ -260,15 +260,13 @@ public class GUI extends JFrame {
                 }
 
                 if (modelGeek.corazon1()) {
-
-
+                    modelGeek.carasDado1();
+                    accion.setText(modelGeek.getEstadoToString());
+                    dadoini1.setVisible(false);
+                    panelDadosUtilizados.add(dadoini1);
+                    dadoini1.setVisible(true);
                     dadoinactivo1.setVisible(false);
                     panelDadosActivos.add(dadoini8);
-                    accion.setText(modelGeek.getEstadoToString());
-                        modelGeek.carasDado1();
-                        dadoini1.setVisible(false);
-                        panelDadosUtilizados.add(dadoini1);
-                        dadoini1.setVisible(true);
                     }
                 }
 
@@ -280,6 +278,14 @@ public class GUI extends JFrame {
                     modelGeek.carasDado2();
                     dadoini2.setVisible(false);
                     panelDadosUtilizados.add(dadoini2);
+                    dadoini2.setVisible(true);
+                    accion.setText(modelGeek.getEstadoToString());
+                }
+
+                if(modelGeek.dado422()){
+                    modelGeek.carasDado2();
+                    dadoini2.setVisible(false);
+                    panelTarjetaPuntuacion.add(dadoini2);
                     dadoini2.setVisible(true);
                     accion.setText(modelGeek.getEstadoToString());
                 }
@@ -296,6 +302,14 @@ public class GUI extends JFrame {
                     dadoini3.setVisible(true);
                     accion.setText(modelGeek.getEstadoToString());
                 }
+
+                if(modelGeek.dado423()){
+                    modelGeek.carasDado3();
+                    dadoini3.setVisible(false);
+                    panelTarjetaPuntuacion.add(dadoini3);
+                    dadoini3.setVisible(true);
+                    accion.setText(modelGeek.getEstadoToString());
+                }
             }
 
             if(e.getSource()==dadoini4){
@@ -306,6 +320,14 @@ public class GUI extends JFrame {
                     modelGeek.carasDado4();
                     dadoini4.setVisible(false);
                     panelDadosUtilizados.add(dadoini4);
+                    dadoini4.setVisible(true);
+                    accion.setText(modelGeek.getEstadoToString());
+                }
+
+                if(modelGeek.dado424()){
+                    modelGeek.carasDado4();
+                    dadoini4.setVisible(false);
+                    panelTarjetaPuntuacion.add(dadoini4);
                     dadoini4.setVisible(true);
                     accion.setText(modelGeek.getEstadoToString());
                 }
@@ -322,6 +344,14 @@ public class GUI extends JFrame {
                     dadoini5.setVisible(true);
                     accion.setText(modelGeek.getEstadoToString());
                 }
+
+                if(modelGeek.dado425()){
+                    modelGeek.carasDado1();
+                    dadoini5.setVisible(false);
+                    panelTarjetaPuntuacion.add(dadoini5);
+                    dadoini5.setVisible(true);
+                    accion.setText(modelGeek.getEstadoToString());
+                }
             }
 
             if(e.getSource()==dadoini6){
@@ -335,6 +365,14 @@ public class GUI extends JFrame {
                     dadoini6.setVisible(true);
                     accion.setText(modelGeek.getEstadoToString());
                 }
+
+                if(modelGeek.dado426()){
+                    modelGeek.carasDado1();
+                    dadoini6.setVisible(false);
+                    panelTarjetaPuntuacion.add(dadoini6);
+                    dadoini6.setVisible(true);
+                    accion.setText(modelGeek.getEstadoToString());
+                }
             }
 
             if(e.getSource()==dadoini7){
@@ -345,6 +383,14 @@ public class GUI extends JFrame {
                     modelGeek.carasDado7();
                     dadoini7.setVisible(false);
                     panelDadosUtilizados.add(dadoini7);
+                    dadoini7.setVisible(true);
+                    accion.setText(modelGeek.getEstadoToString());
+                }
+
+                if(modelGeek.dado427()){
+                    modelGeek.carasDado1();
+                    dadoini7.setVisible(false);
+                    panelTarjetaPuntuacion.add(dadoini7);
                     dadoini7.setVisible(true);
                     accion.setText(modelGeek.getEstadoToString());
                 }
