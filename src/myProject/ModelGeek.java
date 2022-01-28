@@ -150,6 +150,54 @@ public class ModelGeek {
         }
     }
 
+    public void carasDado8(){
+        if(caras[7]==1){
+            estado = 1;
+        }else if(caras[6]==2){
+            estado = 2;
+        }else if(caras[6]==3){
+            estado = 3;
+        }else if(caras[6]==4){
+            estado = 4;
+        }else if(caras[6]==5){
+            estado = 5;
+        }else if(caras[6]==6){
+            estado = 6;
+        }
+    }
+
+    public void carasDado9(){
+        if(caras[8]==1){
+            estado = 1;
+        }else if(caras[6]==2){
+            estado = 2;
+        }else if(caras[6]==3){
+            estado = 3;
+        }else if(caras[6]==4){
+            estado = 4;
+        }else if(caras[6]==5){
+            estado = 5;
+        }else if(caras[6]==6){
+            estado = 6;
+        }
+    }
+
+    public void carasDado10(){
+        if(caras[9]==1){
+            estado = 1;
+        }else if(caras[6]==2){
+            estado = 2;
+        }else if(caras[6]==3){
+            estado = 3;
+        }else if(caras[6]==4){
+            estado = 4;
+        }else if(caras[6]==5){
+            estado = 5;
+        }else if(caras[6]==6){
+            estado = 6;
+        }
+    }
+
     public String getEstadoToString(){
         switch (estado){
             case 1:estadoToString= "Has elegido: 42\n"
@@ -238,6 +286,22 @@ public class ModelGeek {
         }
     }
 
+    public boolean dragon9(){
+        if(caras[8]==3){
+            return true;
+        }else {
+            return false;
+        }
+    }
+
+    public boolean dragon10(){
+        if(caras[9]==3){
+            return true;
+        }else {
+            return false;
+        }
+    }
+
     public boolean corazon1(){
         if(caras[0]==2){
             return true;
@@ -296,6 +360,22 @@ public class ModelGeek {
 
     public boolean corazon8(){
         if(caras[7]==2){
+            return true;
+        }else {
+            return false;
+        }
+    }
+
+    public boolean corazon9(){
+        if(caras[8]==2){
+            return true;
+        }else {
+            return false;
+        }
+    }
+
+    public boolean corazon10(){
+        if(caras[9]==2){
             return true;
         }else {
             return false;
