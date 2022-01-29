@@ -1,5 +1,16 @@
 package myProject;
 
+/**
+ * ModelGeek apply Geek Out! Masters rules
+ * estado = 1 Dado 42
+ * estado = 2 Dado corazón
+ * estado = 3 Dado dragón
+ * estado = 4 Dado superhéroe
+ * estado = 5 Dado Meeple
+ * estado = 6 Dado cohete
+ * @author Cristian Montaño 202024223
+ * @author Maicol Montenegro 202026993
+ */
 public class ModelGeek {
     private Dado dado1, dado2, dado3, dado4, dado5, dado6, dado7, dado8, dado9, dado10, dado42;
     private int ronda, puntuacion, estado;
@@ -7,6 +18,9 @@ public class ModelGeek {
     private String estadoToString;
     private int[] caras;
 
+    /**
+     * Class constructor
+     */
     public ModelGeek(){
         dado1 = new Dado();
         dado2 = new Dado();
@@ -38,6 +52,15 @@ public class ModelGeek {
         return caras;
     }
 
+    /**
+     * Obtain the dice value according to the random image projected
+     * estado = 1 Dado 42
+     * estado = 2 Dado corazón
+     * estado = 3 Dado dragón
+     * estado = 4 Dado superhéroe
+     * estado = 5 Dado Meeple
+     * estado = 6 Dado cohete
+     */
     public void carasDado1(){
         if(caras[0]==1){
             estado = 1;
@@ -54,6 +77,15 @@ public class ModelGeek {
         }
     }
 
+    /**
+     * Obtain the dice value according to the random image projected
+     * estado = 1 Dado 42
+     * estado = 2 Dado corazón
+     * estado = 3 Dado dragón
+     * estado = 4 Dado superhéroe
+     * estado = 5 Dado Meeple
+     * estado = 6 Dado cohete
+     */
     public void carasDado2(){
         if(caras[1]==1){
             estado = 1;
@@ -70,6 +102,15 @@ public class ModelGeek {
         }
     }
 
+    /**
+     * Obtain the dice value according to the random image projected
+     * estado = 1 Dado 42
+     * estado = 2 Dado corazón
+     * estado = 3 Dado dragón
+     * estado = 4 Dado superhéroe
+     * estado = 5 Dado Meeple
+     * estado = 6 Dado cohete
+     */
     public void carasDado3(){
         if(caras[2]==1){
             estado = 1;
@@ -86,6 +127,15 @@ public class ModelGeek {
         }
     }
 
+    /**
+     * Obtain the dice value according to the random image projected
+     * estado = 1 Dado 42
+     * estado = 2 Dado corazón
+     * estado = 3 Dado dragón
+     * estado = 4 Dado superhéroe
+     * estado = 5 Dado Meeple
+     * estado = 6 Dado cohete
+     */
     public void carasDado4(){
         if(caras[3]==1){
             estado = 1;
@@ -102,6 +152,15 @@ public class ModelGeek {
         }
     }
 
+    /**
+     * Obtain the dice value according to the random image projected
+     * estado = 1 Dado 42
+     * estado = 2 Dado corazón
+     * estado = 3 Dado dragón
+     * estado = 4 Dado superhéroe
+     * estado = 5 Dado Meeple
+     * estado = 6 Dado cohete
+     */
     public void carasDado5(){
         if(caras[4]==1){
             estado = 1;
@@ -118,6 +177,15 @@ public class ModelGeek {
         }
     }
 
+    /**
+     * Obtain the dice value according to the random image projected
+     * estado = 1 Dado 42
+     * estado = 2 Dado corazón
+     * estado = 3 Dado dragón
+     * estado = 4 Dado superhéroe
+     * estado = 5 Dado Meeple
+     * estado = 6 Dado cohete
+     */
     public void carasDado6(){
         if(caras[5]==1){
             estado = 1;
@@ -134,6 +202,15 @@ public class ModelGeek {
         }
     }
 
+    /**
+     * Obtain the dice value according to the random image projected
+     * estado = 1 Dado 42
+     * estado = 2 Dado corazón
+     * estado = 3 Dado dragón
+     * estado = 4 Dado superhéroe
+     * estado = 5 Dado Meeple
+     * estado = 6 Dado cohete
+     */
     public void carasDado7(){
         if(caras[6]==1){
             estado = 1;
@@ -150,6 +227,15 @@ public class ModelGeek {
         }
     }
 
+    /**
+     * Obtain the dice value according to the random image projected
+     * estado = 1 Dado 42
+     * estado = 2 Dado corazón
+     * estado = 3 Dado dragón
+     * estado = 4 Dado superhéroe
+     * estado = 5 Dado Meeple
+     * estado = 6 Dado cohete
+     */
     public void carasDado8(){
         if(caras[7]==1){
             estado = 1;
@@ -166,6 +252,15 @@ public class ModelGeek {
         }
     }
 
+    /**
+     * Obtain the dice value according to the random image projected
+     * estado = 1 Dado 42
+     * estado = 2 Dado corazón
+     * estado = 3 Dado dragón
+     * estado = 4 Dado superhéroe
+     * estado = 5 Dado Meeple
+     * estado = 6 Dado cohete
+     */
     public void carasDado9(){
         if(caras[8]==1){
             estado = 1;
@@ -182,6 +277,15 @@ public class ModelGeek {
         }
     }
 
+    /**
+     * Obtain the dice value according to the random image projected
+     * estado = 1 Dado 42
+     * estado = 2 Dado corazón
+     * estado = 3 Dado dragón
+     * estado = 4 Dado superhéroe
+     * estado = 5 Dado Meeple
+     * estado = 6 Dado cohete
+     */
     public void carasDado10(){
         if(caras[9]==1){
             estado = 1;
@@ -198,6 +302,16 @@ public class ModelGeek {
         }
     }
 
+    /**
+     * Establish message game state accoring to estado atribute value
+     * @return Message for the View class
+     * estado = 1 Dado 42
+     * estado = 2 Dado corazón
+     * estado = 3 Dado dragón
+     * estado = 4 Dado superhéroe
+     * estado = 5 Dado Meeple
+     * estado = 6 Dado cohete
+     */
     public String getEstadoToString(){
         switch (estado){
             case 1:estadoToString= "Has elegido: 42\n"
@@ -222,6 +336,10 @@ public class ModelGeek {
         return estadoToString;
     }
 
+    /**
+     * Verify true if the face of the dice 1 is dragon
+     * @return true
+     */
     public boolean dragon1(){
         if(caras[0]==3){
             return true;
@@ -229,7 +347,10 @@ public class ModelGeek {
             return false;
         }
     }
-
+    /**
+     * Verify true if the face of the dice 2 is dragon
+     * @return true
+     */
     public boolean dragon2(){
         if(caras[1]==3){
             return true;
@@ -237,7 +358,10 @@ public class ModelGeek {
             return false;
         }
     }
-
+    /**
+     * Verify true if the face of the dice 3 is dragon
+     * @return true
+     */
     public boolean dragon3(){
         if(caras[2]==3){
             return true;
@@ -245,7 +369,10 @@ public class ModelGeek {
             return false;
         }
     }
-
+    /**
+     * Verify true if the face of the dice 4 is dragon
+     * @return true
+     */
     public boolean dragon4(){
         if(caras[3]==3){
             return true;
@@ -253,7 +380,10 @@ public class ModelGeek {
             return false;
         }
     }
-
+    /**
+     * Verify true if the face of the dice 5 is dragon
+     * @return true
+     */
     public boolean dragon5(){
         if(caras[4]==3){
             return true;
@@ -261,7 +391,10 @@ public class ModelGeek {
             return false;
         }
     }
-
+    /**
+     * Verify true if the face of the dice 6 is dragon
+     * @return true
+     */
     public boolean dragon6(){
         if(caras[5]==3){
             return true;
@@ -269,7 +402,10 @@ public class ModelGeek {
             return false;
         }
     }
-
+    /**
+     * Verify true if the face of the dice 7 is dragon
+     * @return true
+     */
     public boolean dragon7(){
         if(caras[6]==3){
             return true;
@@ -277,7 +413,10 @@ public class ModelGeek {
             return false;
         }
     }
-
+    /**
+     * Verify true if the face of the dice 8 is dragon
+     * @return true
+     */
     public boolean dragon8(){
         if(caras[7]==3){
             return true;
@@ -285,7 +424,10 @@ public class ModelGeek {
             return false;
         }
     }
-
+    /**
+     * Verify true if the face of the dice 9 is dragon
+     * @return true
+     */
     public boolean dragon9(){
         if(caras[8]==3){
             return true;
@@ -293,7 +435,10 @@ public class ModelGeek {
             return false;
         }
     }
-
+    /**
+     * Verify true if the face of the dice 10 is dragon
+     * @return true
+     */
     public boolean dragon10(){
         if(caras[9]==3){
             return true;
@@ -302,6 +447,10 @@ public class ModelGeek {
         }
     }
 
+    /**
+     * Verify true if the face of the dice 1 is corazon
+     * @return true
+     */
     public boolean corazon1(){
         if(caras[0]==2){
             return true;
@@ -310,6 +459,10 @@ public class ModelGeek {
         }
     }
 
+    /**
+     * Verify true if the face of the dice 2 is corazon
+     * @return true
+     */
     public boolean corazon2(){
         if(caras[1]==2){
             return true;
@@ -318,6 +471,10 @@ public class ModelGeek {
         }
     }
 
+    /**
+     * Verify true if the face of the dice 3 is corazon
+     * @return true
+     */
     public boolean corazon3(){
         if(caras[2]==2){
             return true;
@@ -326,6 +483,10 @@ public class ModelGeek {
         }
     }
 
+    /**
+     * Verify true if the face of the dice 4 is corazon
+     * @return true
+     */
     public boolean corazon4(){
         if(caras[3]==2){
             return true;
@@ -334,6 +495,10 @@ public class ModelGeek {
         }
     }
 
+    /**
+     * Verify true if the face of the dice 5 is corazon
+     * @return true
+     */
     public boolean corazon5(){
         if(caras[4]==2){
             return true;
@@ -342,6 +507,10 @@ public class ModelGeek {
         }
     }
 
+    /**
+     * Verify true if the face of the dice 6 is corazon
+     * @return true
+     */
     public boolean corazon6(){
         if(caras[5]==2){
             return true;
@@ -350,6 +519,10 @@ public class ModelGeek {
         }
     }
 
+    /**
+     * Verify true if the face of the dice 7 is corazon
+     * @return true
+     */
     public boolean corazon7(){
         if(caras[6]==2){
             return true;
@@ -358,6 +531,10 @@ public class ModelGeek {
         }
     }
 
+    /**
+     * Verify true if the face of the dice 8 is corazon
+     * @return true
+     */
     public boolean corazon8(){
         if(caras[7]==2){
             return true;
@@ -366,6 +543,10 @@ public class ModelGeek {
         }
     }
 
+    /**
+     * Verify true if the face of the dice 9 is corazon
+     * @return true
+     */
     public boolean corazon9(){
         if(caras[8]==2){
             return true;
@@ -374,6 +555,10 @@ public class ModelGeek {
         }
     }
 
+    /**
+     * Verify true if the face of the dice 10 is corazon
+     * @return true
+     */
     public boolean corazon10(){
         if(caras[9]==2){
             return true;
@@ -382,6 +567,10 @@ public class ModelGeek {
         }
     }
 
+    /**
+     * Verify true if the face of the dice 1 is dado 42
+     * @return true
+     */
     public boolean dado421(){
         if(caras[0]==1){
             return true;
@@ -389,7 +578,10 @@ public class ModelGeek {
             return false;
         }
     }
-
+    /**
+     * Verify true if the face of the dice 2 is dado 42
+     * @return true
+     */
     public boolean dado422(){
         if(caras[1]==1){
             return true;
@@ -397,7 +589,10 @@ public class ModelGeek {
             return false;
         }
     }
-
+    /**
+     * Verify true if the face of the dice 3 is dado 42
+     * @return true
+     */
     public boolean dado423(){
         if(caras[2]==1){
             return true;
@@ -405,7 +600,10 @@ public class ModelGeek {
             return false;
         }
     }
-
+    /**
+     * Verify true if the face of the dice 4 is dado 42
+     * @return true
+     */
     public boolean dado424(){
         if(caras[3]==1){
             return true;
@@ -413,7 +611,10 @@ public class ModelGeek {
             return false;
         }
     }
-
+    /**
+     * Verify true if the face of the dice 5 is dado 42
+     * @return true
+     */
     public boolean dado425(){
         if(caras[4]==1){
             return true;
@@ -421,7 +622,10 @@ public class ModelGeek {
             return false;
         }
     }
-
+    /**
+     * Verify true if the face of the dice 6 is dado 42
+     * @return true
+     */
     public boolean dado426(){
         if(caras[5]==1){
             return true;
@@ -429,7 +633,10 @@ public class ModelGeek {
             return false;
         }
     }
-
+    /**
+     * Verify true if the face of the dice 7 is dado 42
+     * @return true
+     */
     public boolean dado427(){
         if(caras[6]==1){
             return true;
@@ -437,7 +644,10 @@ public class ModelGeek {
             return false;
         }
     }
-
+    /**
+     * Verify true if the face of the dice 8 is dado 42
+     * @return true
+     */
     public boolean dado428(){
         if(caras[7]==1){
             return true;
@@ -445,7 +655,10 @@ public class ModelGeek {
             return false;
         }
     }
-
+    /**
+     * Verify true if the face of the dice 9 is dado 42
+     * @return true
+     */
     public boolean dado429(){
         if(caras[8]==1){
             return true;
@@ -453,7 +666,10 @@ public class ModelGeek {
             return false;
         }
     }
-
+    /**
+     * Verify true if the face of the dice 10 is dado 42
+     * @return true
+     */
     public boolean dado4210(){
         if(caras[9]==1){
             return true;

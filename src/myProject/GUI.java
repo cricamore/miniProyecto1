@@ -8,9 +8,10 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
 /**
- * This class is used for ...
- * @autor Paola-J Rodriguez-C paola.rodriguez@correounivalle.edu.co
- * @version v.1.0.0 date:21/11/2021
+ * This class is used as a view Geek Class
+ * @autor Cristian Camilo Montaño Rentería cristian.camilo.montano@correounivalle.edu.co
+ * @autor Maicol Jair Ordoñez Montenegro maicol.ordonez@correounivalle.edu.co
+ * @version v.1.0.0 date:28/11/2022
  */
 public class GUI extends JFrame {
     public static final String INSTRUCCIONES = "Bienvenido al juego Geek Out! Masters \n"
@@ -223,8 +224,6 @@ public class GUI extends JFrame {
     /**
      * inner class that extends an Adapter Class or implements Listeners used by GUI class
      */
-
-
     private class Escucha implements ActionListener{
 
         @Override
