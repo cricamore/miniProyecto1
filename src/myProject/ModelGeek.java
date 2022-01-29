@@ -153,15 +153,15 @@ public class ModelGeek {
     public void carasDado8(){
         if(caras[7]==1){
             estado = 1;
-        }else if(caras[6]==2){
+        }else if(caras[7]==2){
             estado = 2;
-        }else if(caras[6]==3){
+        }else if(caras[7]==3){
             estado = 3;
-        }else if(caras[6]==4){
+        }else if(caras[7]==4){
             estado = 4;
-        }else if(caras[6]==5){
+        }else if(caras[7]==5){
             estado = 5;
-        }else if(caras[6]==6){
+        }else if(caras[7]==6){
             estado = 6;
         }
     }
@@ -169,15 +169,15 @@ public class ModelGeek {
     public void carasDado9(){
         if(caras[8]==1){
             estado = 1;
-        }else if(caras[6]==2){
+        }else if(caras[8]==2){
             estado = 2;
-        }else if(caras[6]==3){
+        }else if(caras[8]==3){
             estado = 3;
-        }else if(caras[6]==4){
+        }else if(caras[8]==4){
             estado = 4;
-        }else if(caras[6]==5){
+        }else if(caras[8]==5){
             estado = 5;
-        }else if(caras[6]==6){
+        }else if(caras[8]==6){
             estado = 6;
         }
     }
@@ -185,15 +185,15 @@ public class ModelGeek {
     public void carasDado10(){
         if(caras[9]==1){
             estado = 1;
-        }else if(caras[6]==2){
+        }else if(caras[9]==2){
             estado = 2;
-        }else if(caras[6]==3){
+        }else if(caras[9]==3){
             estado = 3;
-        }else if(caras[6]==4){
+        }else if(caras[9]==4){
             estado = 4;
-        }else if(caras[6]==5){
+        }else if(caras[9]==5){
             estado = 5;
-        }else if(caras[6]==6){
+        }else if(caras[9]==6){
             estado = 6;
         }
     }
@@ -461,4 +461,15 @@ public class ModelGeek {
             return false;
         }
     }
+
+    public boolean heroe1(){
+        if(caras[0]==4){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
 }
+
+
