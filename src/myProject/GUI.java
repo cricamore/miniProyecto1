@@ -8,9 +8,10 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
 /**
- * This class is used for ...
- * @autor Paola-J Rodriguez-C paola.rodriguez@correounivalle.edu.co
- * @version v.1.0.0 date:21/11/2021
+ * This class is used as a view Geek Class
+ * @autor Cristian Camilo Montaño Rentería cristian.camilo.montano@correounivalle.edu.co
+ * @autor Maicol Jair Ordoñez Montenegro maicol.ordonez@correounivalle.edu.co
+ * @version v.1.0.0 date:28/11/2022
  */
 public class GUI extends JFrame {
     public static final String INSTRUCCIONES = "Bienvenido al juego Geek Out! Masters \n"
@@ -223,12 +224,11 @@ public class GUI extends JFrame {
     /**
      * inner class that extends an Adapter Class or implements Listeners used by GUI class
      */
-
-
     private class Escucha implements ActionListener{
 
         @Override
         public void actionPerformed(ActionEvent e) {
+
 
             if (e.getSource() == salir) {
                 System.exit(0);
@@ -248,7 +248,6 @@ public class GUI extends JFrame {
                     panelDadosUtilizados.add(dadoini1);
                     dadoini1.setVisible(true);
                     accion.setText(modelGeek.getEstadoToString());
-                    dadoini1.setEnabled(false);
                 }
 
                 if(modelGeek.dado421()){
@@ -268,15 +267,7 @@ public class GUI extends JFrame {
                     dadoinactivo1.setVisible(false);
                     panelDadosActivos.add(dadoini8);
                     }
-
-
-
                 }
-
-
-
-
-
 
             if(e.getSource()==dadoini2){
                 if(modelGeek.dragon2()){
@@ -288,7 +279,6 @@ public class GUI extends JFrame {
                     panelDadosUtilizados.add(dadoini2);
                     dadoini2.setVisible(true);
                     accion.setText(modelGeek.getEstadoToString());
-                    dadoini2.setEnabled(false);
                 }
 
                 if(modelGeek.dado422()){
@@ -299,11 +289,6 @@ public class GUI extends JFrame {
                     accion.setText(modelGeek.getEstadoToString());
                 }
             }
-
-
-
-
-
 
             if(e.getSource()==dadoini3){
                 if(modelGeek.dragon3()){
@@ -326,11 +311,6 @@ public class GUI extends JFrame {
                 }
             }
 
-
-
-
-
-
             if(e.getSource()==dadoini4){
                 if(modelGeek.dragon4()){
                     modelGeek.carasDado4();
@@ -351,11 +331,6 @@ public class GUI extends JFrame {
                     accion.setText(modelGeek.getEstadoToString());
                 }
             }
-
-
-
-
-
 
             if(e.getSource()==dadoini5){
                 if(modelGeek.dragon5()){
@@ -378,11 +353,6 @@ public class GUI extends JFrame {
                 }
             }
 
-
-
-
-
-
             if(e.getSource()==dadoini6){
                 if(modelGeek.dragon6()){
                     modelGeek.carasDado6();
@@ -404,11 +374,6 @@ public class GUI extends JFrame {
                 }
             }
 
-
-
-
-
-
             if(e.getSource()==dadoini7){
                 if(modelGeek.dragon7()){
                     modelGeek.carasDado7();
@@ -429,6 +394,9 @@ public class GUI extends JFrame {
                     accion.setText(modelGeek.getEstadoToString());
                 }
             }
+
+
+
         }
 
     }
